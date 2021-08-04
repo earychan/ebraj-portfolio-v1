@@ -12,8 +12,8 @@ const App = () => {
   return (
     <>
       <Home />
-      <Projectss />
       <Intro />
+      <Projectss />
       <GetInTouch />
       <Footer />
     </>

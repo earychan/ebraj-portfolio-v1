@@ -33,10 +33,9 @@ const Intro = () => {
                   of the reputed Engineering Campus,WRC.
                 </p>
                 <p className="modified-large">
-                  For the past 1 year I am currently working on the great{" "}
-                  <span className="underline">UI design</span> and providing the
-                  life to it through <span className="underline">Coding</span>.
-                  Feel free to contact me.
+                  For the past 1 year I am currently working on the great UI
+                  design and providing the life to it through Coding. Feel free
+                  to contact me.
                 </p>
               </div>
             </div>
