@@ -1,0 +1,33 @@
+// Background Related Colors
+$primary-blue : #161A2F;
+$secondary-blue : #0E1223;
+
+// Text related colors 
+$primary-blue-text : #5E658D;
+$primary-white-text : #eeeeff;
+
+// Button related colors
+$primary-dark : #000000;
+
+//Skills related colors 
+$primary-green : #27AB00;
+$secondary-green : #008472;
+$primary-pink : #C70092;
+$primary-blue-1 : #0049C7;
+$secondary-blue-1 : #5F4DFF;
+$primary-yellow : #DE9D06;
+
+.touch__section{
+    background-color: $primary-blue;
+    color: $primary-white-text;
+    text-align: center;
+    padding-bottom: 50px;
+    >p{
+        border-bottom: 1px solid $primary-blue-text;
+        display: inline-block;
+    }
+    #{&}--title{
+        overflow-wrap: break-word;
+        padding: 10px 0;
+    }
+}

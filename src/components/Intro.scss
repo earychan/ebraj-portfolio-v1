@@ -1,0 +1,114 @@
+// Background Related Colors
+$primary-blue : #161A2F;
+$secondary-blue : #0E1223;
+
+// Text related colors 
+$primary-blue-text : #5E658D;
+$primary-white-text : #eeeeff;
+
+// Button related colors
+$primary-dark : #000000;
+
+//Skills related colors 
+$primary-green : #329613;
+$secondary-green : #008472;
+$primary-pink : #C70092;
+$primary-blue-1 : #0049C7;
+$secondary-blue-1 : #5F4DFF;
+$primary-yellow : #DE9D06;
+
+@mixin color-writer($color,$color-bg){
+    background-color: $color-bg;
+    color: $color;
+    padding: 5px 15px;
+    border-radius: 2px;
+    display: inline-block;
+    // font-family : "IBM Plex Sans";
+}
+// Code taken from the CSS-tricks for the fluid-typography
+@function strip-unit($value) {
+    @return $value / ($value * 0 + 1);
+  }
+  
+  @mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+    $u1: unit($min-vw);
+    $u2: unit($max-vw);
+    $u3: unit($min-font-size);
+    $u4: unit($max-font-size);
+  
+    @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+      & {
+  
+        font-size: $min-font-size;
+        @media screen and (min-width: $min-vw) {
+          font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+        }
+  
+        @media screen and (min-width: $max-vw) {
+          font-size: $max-font-size;
+        }
+      }
+    }
+  }
+  
+  $min_width: 320px;
+  $max_width: 1000px;
+  $min_font: 16px;
+  $max_font: 22px;
+ 
+.color-green{
+    @include color-writer($primary-white-text, $primary-green);
+}
+.color-green-sec{
+    @include color-writer($primary-white-text, $secondary-green);
+}
+.color-pink{
+    @include color-writer($primary-white-text, $primary-pink);
+}
+.color-blue{
+    @include color-writer($primary-white-text, $primary-blue-1);
+}
+.color-blue-sec{
+    @include color-writer($primary-white-text, $secondary-blue-1);
+}
+.color-yellow{
+    @include color-writer($primary-dark, $primary-yellow);
+}
+.color-dark{
+    @include color-writer($primary-white-text, $primary-dark);
+}
+
+.intro{
+    background-color: $primary-blue;
+}
+.intro__section{
+    padding: 100px 0;
+    #{&}--title{
+        padding: 50px 0;
+    }
+    #{&}--grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 40px;
+        @media screen and (max-width:625px){
+            grid-template-columns: 1fr;
+        }
+        &-left{
+            // padding-right: 20px;
+            >h3{
+                padding-bottom: 25px;
+            }
+            >div{
+                p{
+                    margin: 0 5px 5px 0;
+                }
+            }
+        }
+        &-right{
+            // padding-right: 20px;
+            p{
+                padding-bottom: 20px;
+            }
+        }
+    }
+}

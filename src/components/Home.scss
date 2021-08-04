@@ -1,0 +1,107 @@
+// Background Related Colors
+$primary-blue : #161A2F;
+$secondary-blue : #0E1223;
+
+// Text related colors 
+$primary-blue-text : #5E658D;
+$primary-white-text : #eeeeff;
+
+// Button related colors
+$primary-dark : #000000;
+
+//Skills related colors 
+$primary-green : #27AB00;
+$secondary-green : #008472;
+$primary-pink : #C70092;
+$primary-blue-1 : #0049C7;
+$secondary-blue-1 : #5F4DFF;
+$primary-yellow : #DE9D06;
+
+
+@mixin flex-container($direction,$align,$justify){
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $justify;
+    flex-wrap: wrap;
+}
+@mixin width-box ($width){
+    width: $width;
+    text-align: center;
+    margin: 0 auto;
+}
+
+ul{
+    @include flex-container(row, center,space-between );
+}
+.active{
+    color: $primary-white-text;
+}
+.home{
+    background-color: $primary-blue;
+}
+.home__section{
+    color: $primary-white-text;
+    #{&}--nav{
+        @include flex-container(row,center , space-between);
+        &-ul{
+            li{
+                margin-right: 15px;
+                cursor: pointer;
+            }
+        }
+    }
+    #{&}--version{
+        @include flex-container(row, center, space-between);
+        img{
+            width: 100px;
+            height: auto;
+        }
+        &-tag{
+            background-color: rgba(255, 68, 208, 0.322);
+            color: $primary-white-text;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+    }
+    #{&}--social{
+        @include flex-container(row, center,center );
+        &-ul{
+            li{
+                padding-left: 10px;
+                @include flex-container(row,center , center);
+                text-align: center;
+                svg{
+                    @include flex-container(row,center , center);
+                }
+            }
+        }
+    }
+
+    #{&}--main{
+        margin: 0 auto;
+        &-title{
+            @include width-box(65%);
+            padding: 100px 0 10px 0;
+            @media screen and (max-width:910px){
+                padding: 200px 0 10px 0;
+            }
+            @media screen and (max-width:825px){
+                @include width-box(90%);
+            }
+            @media screen and (max-width:550px){
+                @include width-box(100%);
+            }
+        }
+        &-para{
+            @include width-box(50%);
+            padding: 10px 0 100px 0;
+            @media screen and (max-width:825px){
+                @include width-box(75%);
+            }
+            @media screen and (max-width:550px){
+                @include width-box(95%);
+            }
+        }
+    }
+}
