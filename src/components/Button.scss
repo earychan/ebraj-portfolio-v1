@@ -1,27 +1,10 @@
-// Background Related Colors
-$primary-blue : #161A2F;
-$secondary-blue : #0E1223;
+@import "./variables.scss";
 
-// Text related colors 
-$primary-blue-text : #5E658D;
-$primary-white-text : #eeeeff;
+.btn-dark {
+  background-color: $primary-dark;
+  color: $primary-white-text;
 
-// Button related colors
-$primary-dark : #000000;
-
-//Skills related colors 
-$primary-green : #27AB00;
-$secondary-green : #008472;
-$primary-pink : #C70092;
-$primary-blue-1 : #0049C7;
-$secondary-blue-1 : #5F4DFF;
-$primary-yellow : #DE9D06;
-
-.btn-dark{
-    background-color: $primary-dark;
-    color: $primary-white-text;
-
-    @media screen and (max-width:768px){
-        background-color: $secondary-blue-1;
-    }
+  @media screen and (max-width: 768px) {
+    background-color: $secondary-blue-1;
+  }
 }

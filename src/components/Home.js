@@ -27,14 +27,11 @@ const Home = () => {
           {/* Main Section */}
           <div className="home__section--main">
             <div className="container-1200">
-              <h1 className="home__section--main-title">
-                Ebraj Gurung is a Frontend Developer, who loves to design & give
-                the life to that design through coding.
-              </h1>
-              <p className="home__section--main-para italic">
-                I design as well as develop the sites that are unique in design
-                and probabily have the greatest UX.
+              <h1 className="home__section--main-title">Ebraj Gurung.</h1>
+              <p className="home__section--main-para">
+                Designer / Frontend Developer
               </p>
+              <div className="home__section--main-img"></div>
             </div>
           </div>
         </section>

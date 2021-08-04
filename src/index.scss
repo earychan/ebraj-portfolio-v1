@@ -1,24 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
 @import "./components/variables.scss";
 @import "./components/mixins.scss";
 // Code taken from the CSS-tricks for the fluid-typography
 
 // Getting the font
-@font-face {
-  font-family: "IBM Bold";
-  src: url(./fonts/Bold.ttf);
-}
-@font-face {
-  font-family: "IBM Regular";
-  src: url(./fonts/Regular.ttf);
-}
-@font-face {
-  font-family: "IBM Light";
-  src: url(./fonts/Light.ttf);
-}
-@font-face {
-  font-family: "IBM Light Italic";
-  src: url(./fonts/LightItalic.ttf);
-}
 
 *,
 *::before,
@@ -32,6 +19,7 @@ html,
 body {
   height: 100%;
   width: 100%;
+  font-family: "Montserrat", sans-serif;
 }
 body {
   background-color: $n-primary-white;
@@ -43,13 +31,13 @@ h4,
 h5,
 h6 {
   // color: $primary-white-text;
-  font-family: "IBM Bold";
+  //   font-family: "IBM Bold";
 }
 h1 {
-  @include fluid-type(320px, 1400px, 32px, 37px);
+  @include fluid-type(320px, 1400px, 45px, 50px);
+  font-weight: 900;
 }
 h2 {
-  font-family: "IBM Bold";
   @include fluid-type(320px, 1400px, 35px, 40px);
 }
 h3 {
@@ -62,7 +50,7 @@ ul li {
   color: $primary-blue-text;
   @include fluid-type(320px, 1400px, 18px, 20px);
   line-height: 1.45;
-  font-family: "IBM Regular";
+  font-family: "IBM Plex Sans", sans-serif;
 }
 p.modified {
   @include fluid-type(320px, 1400px, 16px, 18px);
@@ -96,7 +84,6 @@ button,
   border-radius: 2px;
   cursor: pointer;
   display: inline-block;
-  font-family: "IBM Regular";
 }
 @mixin container-width($container-width) {
   margin: 0 auto;
@@ -116,7 +103,4 @@ button,
 .underline {
   border-bottom: 1px solid $primary-white-text;
   color: $primary-white-text;
-}
-.italic {
-  font-family: "IBM Light Italic";
 }
