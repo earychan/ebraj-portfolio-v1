@@ -7,29 +7,27 @@ $min_font: 16px;
 $max_font: 22px;
 
 .color-green {
-  @include color-writer($primary-white-text, $primary-green);
+  @include color-writer($n-primary-white, $primary-green);
 }
 .color-green-sec {
-  @include color-writer($primary-white-text, $secondary-green);
+  @include color-writer($n-primary-white, $secondary-green);
 }
 .color-pink {
-  @include color-writer($primary-white-text, $primary-pink);
+  @include color-writer($n-primary-white, $primary-pink);
 }
 .color-blue {
-  @include color-writer($primary-white-text, $primary-blue-1);
+  @include color-writer($n-primary-white, $primary-blue-1);
 }
 .color-blue-sec {
-  @include color-writer($primary-white-text, $secondary-blue-1);
+  @include color-writer($n-primary-white, $secondary-blue-1);
 }
 .color-yellow {
-  @include color-writer($primary-dark, $primary-yellow);
+  @include color-writer($n-primary-dark, $primary-yellow);
 }
 .color-dark {
-  @include color-writer($primary-white-text, $primary-dark);
+  @include color-writer($n-primary-white, $n-primary-dark);
 }
 
-.intro {
-}
 .intro__section {
   padding: 100px 0;
   #{&}--title {
@@ -37,16 +35,15 @@ $max_font: 22px;
   }
   #{&}--grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 40px;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 60px;
     @media screen and (max-width: 625px) {
       grid-template-columns: 1fr;
     }
+    h2 {
+      padding-bottom: 20px;
+    }
     &-left {
-      // padding-right: 20px;
-      > h3 {
-        padding-bottom: 25px;
-      }
       > div {
         p {
           margin: 0 5px 5px 0;
@@ -54,7 +51,6 @@ $max_font: 22px;
       }
     }
     &-right {
-      // padding-right: 20px;
       p {
         padding-bottom: 20px;
       }

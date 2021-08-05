@@ -1,11 +1,10 @@
 @import "./variables.scss";
 
 .touch__section {
-  color: $primary-white-text;
+  padding: 90px 0;
   text-align: center;
   padding-bottom: 50px;
   > p {
-    border-bottom: 1px solid $primary-blue-text;
     display: inline-block;
   }
   #{&}--title {

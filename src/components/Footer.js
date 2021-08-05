@@ -5,7 +5,9 @@ const Footer = () => {
   return (
     <>
       <footer className="footer__section">
-        <p>Copyright © 2020 Ebraj Gurung. All rights reserved.</p>
+        <div className="container-1000">
+          <p>Copyright © 2020 Ebraj Gurung. All rights reserved.</p>
+        </div>
       </footer>
     </>
   );

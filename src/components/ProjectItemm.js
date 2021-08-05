@@ -1,13 +1,14 @@
 import React from "react";
 // import "./ProjectItemm.scss";
 
-const ProjectItemm = () => {
+const ProjectItemm = ({ projectDetail }) => {
+  const { name, techUsed, liveLink, repoLink } = projectDetail;
   return (
     <>
       <div>
         <div>
           <div>
-            <a href="https://pomodoro-timer-ebraj.netlify.app/" target="blank">
+            <a href={liveLink} target="blank">
               <svg
                 fillRule="#000000"
                 xmlns="http://www.w3.org/2000/svg"
@@ -20,10 +21,7 @@ const ProjectItemm = () => {
             </a>
           </div>
           <div>
-            <a
-              href="https://github.com/Ebraj/pomodoro-timer-using-react"
-              target="blank"
-            >
+            <a href={repoLink} target="blank">
               <svg
                 fillRule="#000000"
                 xmlns="http://www.w3.org/2000/svg"
@@ -40,8 +38,8 @@ const ProjectItemm = () => {
           </div>
         </div>
         <div>
-          <h2>Pomodoro Timer.</h2>
-          <p>REACT + SCSS</p>
+          <h2>{name}</h2>
+          <p>{techUsed}</p>
         </div>
       </div>
     </>

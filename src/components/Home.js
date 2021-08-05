@@ -3,6 +3,7 @@ import "./Home.scss";
 import "./Button";
 import Navbar from "./Navbar";
 import ResponsiveBar from "./ResponsiveBar";
+import Ebraj from "../images/personal/Ebraj.png";
 
 const Home = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -31,7 +32,9 @@ const Home = () => {
               <p className="home__section--main-para">
                 Designer / Frontend Developer
               </p>
-              <div className="home__section--main-img"></div>
+              <div className="home__section--main-img">
+                <img src={Ebraj} alt="Ebraj Hero" />
+              </div>
             </div>
           </div>
         </section>

@@ -1,5 +1,9 @@
 @import "./variables.scss";
 .footer__section {
+  background-color: $n-primary-dark;
   text-align: center;
   padding: 50px;
+  p {
+    color: $n-primary-white;
+  }
 }

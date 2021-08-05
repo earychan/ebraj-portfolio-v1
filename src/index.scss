@@ -19,7 +19,7 @@ html,
 body {
   height: 100%;
   width: 100%;
-  font-family: "Montserrat", sans-serif;
+  font-family: "IBM Plex Sans", sans-serif;
 }
 body {
   background-color: $n-primary-white;
@@ -30,30 +30,27 @@ h3,
 h4,
 h5,
 h6 {
-  // color: $primary-white-text;
-  //   font-family: "IBM Bold";
+  color: $n-primary-dark;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
 }
 h1 {
-  @include fluid-type(320px, 1400px, 45px, 50px);
-  font-weight: 900;
+  @include fluid-type(320px, 1400px, 50px, 60px);
 }
 h2 {
   @include fluid-type(320px, 1400px, 35px, 40px);
 }
 h3 {
   @include fluid-type(320px, 1400px, 22px, 25px);
-  color: $primary-blue-text;
 }
 p,
 ul li {
   list-style: none;
-  color: $primary-blue-text;
+  color: $n-primary-gray;
   @include fluid-type(320px, 1400px, 18px, 20px);
   line-height: 1.45;
-  font-family: "IBM Plex Sans", sans-serif;
 }
 p.modified {
-  @include fluid-type(320px, 1400px, 16px, 18px);
   font-weight: 600;
 }
 p.modified-large {
@@ -63,11 +60,10 @@ p.modified-large {
 a {
   text-decoration: none;
   display: block;
-  color: $primary-blue-text;
+  color: $n-primary-gray;
   transition: all 0.5s ease;
   &:hover {
-    color: $primary-white-text;
-    // border-bottom: 1px solid $primary-white-text;
+    color: $n-primary-dark;
   }
 }
 

@@ -5,8 +5,10 @@ const GetInTouch = () => {
   return (
     <>
       <section className="touch__section" id="contact">
-        <p>Get In Touch</p>
-        <h1 className="touch__section--title">gurungebraj22@gmail.com</h1>
+        <div className="container-1000">
+          <p>Get In Touch</p>
+          <h1 className="touch__section--title">gurungebraj22@gmail.com</h1>
+        </div>
       </section>
     </>
   );
